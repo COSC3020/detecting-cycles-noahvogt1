@@ -3,13 +3,11 @@ function helper(graph, startNode, nodesVisited = []) {
     
     for (let i = 0; i < graph.length; i++) {
         if (graph[startNode][i] != 0) {
-            if (nodesVisited.includes(i)) {
-                if (i == startNode) {
-                    return true;
-                }
+            if (nodesVisited.includes(i) || i == startNode) {
+                return true;
             }
             
-            if (helper(graph, i, nodesVisited)) {
+            if (!nodesVisited.includes(i) && helper(graph, i, nodesVisited)) {
                 return true;
             }
         }
