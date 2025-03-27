@@ -1,4 +1,7 @@
 # Detecting Cycles in Graphs
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
+No outside help was used for this program. Other than copying some code from the graph search because I realized that the two could be solved similarly
 
 Kruskal's Algorithm adds edges to the minimum spanning tree, unless they would
 add a cycle. In the lectures, we did not talk about how to do this -- you're
