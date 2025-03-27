@@ -1,4 +1,7 @@
 # Detecting Cycles in Graphs
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
+No outside help was used for this program. Other than copying some code from the graph search because I realized that the two could be solved similarly
 
 Kruskal's Algorithm adds edges to the minimum spanning tree, unless they would
 add a cycle. In the lectures, we did not talk about how to do this -- you're
@@ -13,5 +16,15 @@ the function and run automatically when you commit through a GitHub action.
 
 ## Runtime Analysis
 
-What is the worst-case big $\Theta$ complexity of your implementation? Add your
-answer, including your reasoning, to this markdown file.
+What is the worst-case big $\Theta$ complexity of your implementation? 
+
+The worst case big $\Theta$ seems like it should be $\Theta(V^3)$  with V
+being the number of vertices in the graph. This is because we get $\Theta(V)$ 
+from the first loop in the hasCycle() function because we iterate over all of
+the vertices. Then we use another loop for checking for any edges between each
+vertex which gives us another $\Theta(V)$. Then we have .includes() which iterates
+over all of the vertices that we have already covered which gives us another $\Theta(V)$.
+Then finally the recursions worst case complexity would be to iterate over each vertex
+giving us another $\Theta(V)$, however, it is on the same level as the .include(). That
+provides us with a total of V + V on the inner loop. This would end up with a complexity 
+of V * V * (V + V) $\in \Theta(V^3)$.
