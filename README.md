@@ -16,11 +16,11 @@ the function and run automatically when you commit through a GitHub action.
 What is the worst-case big $\Theta$ complexity of your implementation? 
 
 The worst case big $\Theta$ seems like it should be $\Theta(V^4)$  with V
-being the number of vertices in the graph. This is because we get $\Theta(V)$  
+being the number of vertices in the graph. This is because we get $\Theta(V)$ 
 from the first loop in the hasCycle() function because we iterate over all of
 the vertices. Then we use another loop for checking for any edges between each
 vertex which gives us another $\Theta(V)$. Then we have .includes() which iterates
 over all of the vertices that we have already covered which gives us another $\Theta(V)$.
 Then finally the recursions worst case complexity would be to iterate over each vertex
-giving us another $\Theta(V)$. All in all this is my reasoning as to why the $\Theta$  
+giving us another $\Theta(V)$. All in all this is my reasoning as to why the $\Theta$ 
 complexity wold be $\Theta(V^4)$.
