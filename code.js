@@ -7,7 +7,7 @@ function helper(graph, startNode, nodesVisited = []) {
                 return true;
             }
             
-            if (!nodesVisited.includes(i) && helper(graph, i, nodesVisited)) {
+            if (helper(graph, i, nodesVisited)) {
                 return true;
             }
         }
